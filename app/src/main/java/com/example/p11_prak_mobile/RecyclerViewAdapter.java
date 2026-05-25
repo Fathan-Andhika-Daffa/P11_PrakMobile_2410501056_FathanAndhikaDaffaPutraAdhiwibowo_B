@@ -60,7 +60,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     }
 
     public static class GridViewHolder extends RecyclerView.ViewHolder {
-        private final ItemLayoutBinding binding;
+        public final ItemLayoutBinding binding;
 
         public GridViewHolder(ItemLayoutBinding binding) {
             super(binding.getRoot());

@@ -30,6 +30,7 @@ public class DetailActivity extends AppCompatActivity {
         setSupportActionBar(binding.toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setTitle("");
         }
 
         // Terima idMeal dari Intent
@@ -58,7 +59,7 @@ public class DetailActivity extends AppCompatActivity {
                         String instruction = data.getString("strInstructions");
                         String photoUrl = data.getString("strMealThumb");
 
-                        binding.toolbar.setTitle(mealName);
+                        binding.collapsingToolbar.setTitle(mealName);
                         binding.tvName.setText(mealName);
                         binding.tvInstruction.setText(instruction);
 
@@ -84,7 +85,7 @@ public class DetailActivity extends AppCompatActivity {
 
     @Override
     public boolean onSupportNavigateUp() {
-        onBackPressed();
+        getOnBackPressedDispatcher().onBackPressed();
         return true;
     }
 }
